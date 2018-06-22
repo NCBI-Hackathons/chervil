@@ -23,15 +23,12 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 * Apply machine learning to identify HERV expression patterns specific to viral infection using [TPOT](https://github.com/EpistasisLab/tpot).
 
 
-### Example Dataset
-* PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
-    + Data Type: RNA-seq
-    + Conditions / Samples: H1N1, H5N1, H3N2, mock-infected controls
-* PRJNA429171: HuH7 cells infected with Ebola and Marburg Virus
-    + Data Type: RNA-seq
-    + Conditions / Samples: Ebola, Marburg, mock-infected controls
 
 ## How to use CHERVIL
+### Input .CSV file that looks like this
+
+### Simple one line command to generate HERV count data
+### Other use info here?
 
 ## Installation 
 ### Requirements
@@ -39,3 +36,7 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 #### Libraries
 
 ## Example Run
+### Example Dataset
+* PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
+    + Data Type: RNA-seq
+    + Conditions / Samples: H1N1, H5N1, H3N2, mock-infected controls
