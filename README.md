@@ -1,14 +1,20 @@
-# VirusFeatures
+# chervil
 A detection algorithm for endogenous retro-viral expression features that correspond to previous viral infection. 
 
-## What is the problem?
+## What is chervil?
+Human Endogenous Retroviral Elements (hERVs) are typically latent in the human genome. However, previous work suggests that some hERVs become actively transcribed upon new viral infection. Chervil attempts to...
 
-## Why should we solve it?
 
 ## Overview Diagram of Workflow
+### Retro-Spotter Plus
+### Novel Pipeline
 
-## How to use
+## How to use chervil
 
-## Install Instructions:
+## Software Workflow Diagram
 
-hello
+## File Structure Diagram
+
+## Install Instructions
+
+
