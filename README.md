@@ -2,6 +2,10 @@
 
 Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection.
 
+
+![image](image.png)
+
+
 ## What is CHERVIL and why do we need it?
 Human endogenous retroviral elements (HERVs) are retroviruses that have integrated themselves into the human germline. Usually, they remain latent in the human genome. However, previous work suggests that some HERVs become actively transcribed upon viral infection. CHERVIL uses differential expression analysis of HERVs in healthy and infected populations via RNA-seq in  to detect pre-symptomatic or historic viral infection.
 
@@ -9,7 +13,7 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 
 ## Overview Diagram of Workflow
 
-![image](erv_mod_workflow.png)
+![image](workflow.png)
 
 ### RetroSpotter Plus
 * Utilize RetroSpotter to identify differentially expressed HERVs in infected populations
@@ -29,9 +33,10 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 
 ## How to use CHERVIL
 
-## Software Workflow Diagram
 
 ## Install Instructions
 ### Requirements
 #### Software
 #### Libraries
+
+## Run Example
