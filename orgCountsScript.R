@@ -1,12 +1,15 @@
+#!/usr/bin/env RScript
+args = commandArgs(trailingOnly=TRUE)
+
 
 ###### retrieve the SRR numbers and the class ids text file
-classids_path="C:/Users/gvagl/Dropbox/GradSchool/IQBioProgram/RMGHC/classids.txt" #path to a tab-delimited file with SRR and class id
-classids = data.frame(read.table(file=classids_path, sep = "\t"), stringsAsFactors = FALSE)
+classids_path = args[1] #path to a tab-delimited file with SRR and class id
+classids = data.frame(read.csv(file=classids_path, header = FALSE), stringsAsFactors = FALSE)
 colnames(classids) <- c("SRR", "class")
 
 
 ###### gather all of the counts data into a single data.frame
-sam_dir = "C:/Users/gvagl/Dropbox/GradSchool/IQBioProgram/RMGHC/" # this is the directory that stores the sam.hitcount.txt files
+sam_dir = args[2] # this is the directory that stores the sam.hitcount.txt files
 
 for(f in 1:nrow(classids)){
   
@@ -42,3 +45,7 @@ for(srr in 1:nrow(classids)){
   classids[srr,3:ncol(classids)] = allhits[[ind]]
   rm(ind)
 }
+
+rm(allhits)
+
+write.csv(classids, "ERVcounts_comp.csv", row.names = FALSE)
