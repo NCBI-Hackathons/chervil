@@ -2,9 +2,10 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from tpot import TPOTClassifier
+import sys
 
 # import the ERV expression data as a Pandas dataframe
-df = pd.read_csv("ERV_sim_expression_more.csv")
+df = pd.read_csv(sys.argv[0])
 df = df.values[:, 1:]
 
 # create a class vector corresponding to the df being 50/50 split of each class
