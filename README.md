@@ -8,6 +8,8 @@ CHERVIL builds on an exisiting pipelines built for HERV detection (RetroSpotter)
 
 ## Overview Diagram of Workflow
 
+![image](erv_workflow.jpeg)
+
 ### RetroSpotter Plus
 * Utilize RetroSpotter to identify differentially expressed hERVs in infected populations 
     + Supply SRA accession numbers for expression dataset of healthy and infection of interest
