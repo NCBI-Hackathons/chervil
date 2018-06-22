@@ -1,12 +1,12 @@
 # VirusFeatures
 A detection algorithm for endogenous retro-viral expression features that correspond to previous viral infection. 
 
-##What is the problem?
+## What is the problem?
 
-##Why should we solve it?
+## Why should we solve it?
 
-##Overview Diagram of Workflow
+## Overview Diagram of Workflow
 
-##How to use
+## How to use
 
-##Install Instructions:
+## Install Instructions:
