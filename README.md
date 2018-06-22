@@ -26,10 +26,14 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
     + Data Type: RNA-seq
     + Conditions / Samples: Ebola, Marburg, mock-infected controls
 
-## How to use chervil
+## How to use CHERVIL
 
 ## Software Workflow Diagram
 
 ## File Structure Diagram
 
 ## Install Instructions
+### Requirements
+#### Software
+#### Libraries
+
