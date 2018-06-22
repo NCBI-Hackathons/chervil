@@ -1,4 +1,9 @@
 # CHERVIL
+
+(super sexy flat logo in progress goes here)
+![hackathon](https://img.shields.io/badge/hackathon-in%20progress-brightgreen.svg)
+
+
 Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection.
 
 ## What is CHERVIL and why do we need it?
@@ -14,7 +19,7 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 * Utilize RetroSpotter to identify differentially expressed HERVs in infected populations
     + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
     + Supply database of HERV sequences of interest
-* Generate HERV1 count dataframe 
+* Generate HERV1 count dataframe
 * Apply machine learning to identify HERV expression patterns specific to viral infection using [TPOT](https://github.com/EpistasisLab/tpot).
 
 
@@ -36,4 +41,3 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 ### Requirements
 #### Software
 #### Libraries
-
