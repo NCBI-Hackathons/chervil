@@ -8,21 +8,15 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 
 ## Overview Diagram of Workflow
 
-![image](erv_workflow.jpeg)
+![image](erv_mod_workflow.png)
 
 ### RetroSpotter Plus
 * Utilize RetroSpotter to identify differentially expressed HERVs in infected populations
     + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
     + Supply database of HERV sequences of interest
-
+* Generate HERV1 count dataframe 
 * Apply machine learning to identify HERV expression patterns specific to viral infection using [TPOT](https://github.com/EpistasisLab/tpot).
 
-### Novel Pipeline
-* Create new pipeline for RNAseq analysis using Rsubread
-    + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
-    + Use human reference genome with HERV annotation
-
-* Apply machine learning to identify patterns of HERV expression specific to viral infection
 
 ### Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
