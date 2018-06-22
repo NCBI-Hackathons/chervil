@@ -1,5 +1,5 @@
 # chervil
-Computational Human Endogenous RetroVIral Labeling is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection. 
+Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection. 
 
 ## What is chervil and why do we need it?
 Human Endogenous Retroviral Elements (hERVs) are typically latent in the human genome. However, previous work suggests that some hERVs become actively transcribed upon viral infection. Chervil uses differential expression analysis of hERVs in healthy and infected popuations (e.g. RNA-seq) in an attempt to develop a diagnostic tool for detection of pre-symptomatic or historic viral infection. 
@@ -12,18 +12,13 @@ Chervil builds on an exisiting pipelins built for hERV detection (RetroSpotter) 
 ### RetroSpotter Plus
 * Utilize RetroSpotter to identify differentially expressed hERVs in infected populations 
     + Supply SRA accession numbers for expression dataset of healthy and infection of interest
-    +
-    +
+   
 * Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
-    +
-    +
-    +
-
+    
 ### Novel Pipeline
 * Create new pipeline for RNAseq analysis using Rsubread 
-    + 
-    +
-    +
+    + Supply SRA accession numbers for expression dataset of healthy and infection of interest
+    
 * Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
 
 ### Example Dataset
