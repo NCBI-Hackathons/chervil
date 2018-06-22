@@ -33,8 +33,6 @@ CHERVIL builds on an existing pipelines built for HERV detection (RetroSpotter) 
 
 ## How to use CHERVIL
 
-## Software Workflow Diagram
-
 ## Install Instructions
 ### Requirements
 #### Software
