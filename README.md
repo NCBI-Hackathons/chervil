@@ -10,25 +10,30 @@ Chervil builds on an exisiting pipelins built for hERV detection (RetroSpotter) 
 ## Overview Diagram of Workflow
 
 ### RetroSpotter Plus
-1) Utilize RetroSpotter to identify differentially expressed hERVs in infected populations
-  i) Supply SRA accession numbers for expression dataset of healthy and infection of interest
-  ii)
-  iii)
-2) Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
-  i)
-  ii)
-  iii)
+* Utilize RetroSpotter to identify differentially expressed hERVs in infected populations 
+    + Supply SRA accession numbers for expression dataset of healthy and infection of interest
+    +
+    +
+* Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
+    +
+    +
+    +
 
 ### Novel Pipeline
-1) Create new pipeline for RNAseq analysis using Rsubread 
-  i)
-  ii)
-  iii)
-    
-2) Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
+* Create new pipeline for RNAseq analysis using Rsubread 
+    + 
+    +
+    +
+* Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
 
 ### Example Dataset
-PRJNA349748
+* PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
+    + Data Type: RNA-seq
+    + Conditions / Samples: H1N1, H5N1, H3N2, mock-infected controls
+* PRJNA429171: HuH7 cells infected with Ebola and Marburg Virus
+    + Data Type: RNA-seq
+    + Conditions / Samples: Ebola, Margburg, mock-infected contrls
+    
 
 
 ## How to use chervil
