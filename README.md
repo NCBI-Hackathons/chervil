@@ -1,9 +1,8 @@
 # CHERVIL
 
-(super sexy flat logo in progress goes here)
+![chervil](https://cdn.shopify.com/s/files/1/1198/2742/products/parsley_1024x1024.jpg?v=1470118331)
 
 ![hackathon](https://img.shields.io/badge/hackathon-in%20progress-brightgreen.svg)
-
 
 Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection.
 
