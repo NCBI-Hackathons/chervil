@@ -25,7 +25,8 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 
 
 ## How to use CHERVIL
-### Input .CSV file that looks like this
+#### Input .CSV file that looks like this
+![image](example_file.csv)
 
 ### Simple one line command to generate HERV count data
 ### Other use info here?
