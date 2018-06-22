@@ -11,14 +11,16 @@ CHERVIL builds on an exisiting pipelines built for HERV detection (RetroSpotter)
 ![image](erv_workflow.jpeg)
 
 ### RetroSpotter Plus
-* Utilize RetroSpotter to identify differentially expressed hERVs in infected populations 
-    + Supply SRA accession numbers for expression dataset of healthy and infection of interest
+* Utilize RetroSpotter to identify differentially expressed HERVs in infected populations 
+    + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
+    + Supply database of HERV sequences of interest
    
-* Apply Machine Learning Algorithm to identify classifiers of hERVS specific to viral infection
+* Apply Machine Learning Algorithm to identify classifiers of HERVS specific to viral infection
     
 ### Novel Pipeline
 * Create new pipeline for RNAseq analysis using Rsubread 
-    + Supply SRA accession numbers for expression dataset of healthy and infection of interest
+    + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
+    + Use human reference genome with HERV annotation
     
 * Apply machine learning to identify patterns of HERV expression specific to viral infection
 
