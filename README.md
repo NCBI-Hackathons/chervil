@@ -61,7 +61,7 @@ This command calls multiple scripts that execute the pipeline we have developed.
 
 * Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
 
-* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is
+* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is 
 
 4. Other use info here?
 
@@ -101,12 +101,14 @@ Next, to install the Python components, run:
 Once you've installed the Python requirements, install [XGBoost](https://xgboost.readthedocs.io/en/latest/build.html). Be sure to [install the Python bindings](http://xgboost.readthedocs.io/en/latest/build.html#python-package-installation) for XGBoost as well.
 
 ## Example Run
-### Input
+### Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
     + Data Type: RNA-seq
-    + Conditions / Samples: H1N1, H5N1, H3N2, mock-infected controls
-
-### Output
+    + Samples: 
+        + 10 H1N1, H5N1, and H3N2 infected cells
+        + 5 mock-infected controls
+    
+### Example Report
 <table>
 <tr  align="center">
 <td>Actual</td>
