@@ -22,7 +22,7 @@ def cli(erv_data):
     X_train, X_test, y_train, y_test = X_train.astype(float), X_test.astype(float), y_train.astype(float), y_test.astype(float)
 
     # create a pipeline
-    pipeline_optimizer = TPOTClassifier(generations=1, population_size=1, cv=5, verbosity=2)
+    pipeline_optimizer = TPOTClassifier(generations=1, population_size=1, cv=2, verbosity=2)
     pipeline_optimizer.fit(X_train, y_train)
     pipeline_optimizer.export('tpot_exported_pipeline.py')
 

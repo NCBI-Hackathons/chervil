@@ -28,3 +28,4 @@ RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-mag
 RUN tar xzf ncbi-magicblast-1.3.0-x64-linux.tar.gz
 RUN mv ncbi-magicblast-1.3.0/bin/* /usr/bin/
 ADD . /tmp
+ENV PATH="/tmp/backend_scripts/:${PATH}"
