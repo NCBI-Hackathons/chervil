@@ -36,6 +36,16 @@ SRR021222, control
 (note: these are made-up accessions)
 
 2. Simple one line command to generate HERV count data
+
+This command calls multiple scripts that execute the pipeline we have developed. 
+    a. RetroSpotter github repo is cloned 
+    b. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses 
+    c. this is all taken care of using a reference fasta file from RetroSpotter 
+    d. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNAseq reads to the reference blast database 
+    e. call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene 
+    f. organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file 
+    g. feed this dataframe into our machine learning algorithm for class detection
+
 3. Other use info here?
 
 ## Installation
