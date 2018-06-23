@@ -118,8 +118,8 @@ This command calls multiple scripts that execute the pipeline we have developed.
 
 ### Example Report
 
-2-fold Cross Validated accuracy: .917   
-External accuracy: .75
+2-fold Cross Validation accuracy: .917   
+Validation accuracy: .75
 
 <table>
 <tr  align="center">
