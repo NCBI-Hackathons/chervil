@@ -23,8 +23,6 @@ The second phase is the automatic development of a machine learning pipeline tha
 
 ## How to use CHERVIL
 
-0. Add the backend_scripts directory to your path
-
 1. Create blast database with HERV elements
 
 Users will need to create a fasta file containing the nucleotide sequence of each HERV element.  The `makeblastdb.sh` command creates a blast database.
@@ -65,7 +63,12 @@ This command calls multiple scripts that execute the pipeline we have developed.
 
 4. Other use info here?
 
-## Installation
+## Docker instructions
+
+`docker pull benjamindlee/chervil`
+`docker run chervil`
+
+## Installation (without Docker)
 ### Requirements
 
 Before proceeding, ensure that you have the following installed and functional:
