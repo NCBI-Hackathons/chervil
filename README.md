@@ -42,6 +42,13 @@ SRR021222, control
 
 ## Installation
 ### Requirements
+
+You will need the following:
+
+1. R
+2. Python 3.6
+3. A sense of adventure
+
 #### Software
 #### Libraries
 
