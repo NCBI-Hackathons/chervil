@@ -49,19 +49,17 @@ SRR021222, control
 
 This command calls multiple scripts that execute the pipeline we have developed.
 
-a. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses
+* this is all taken care of using a reference FASTA file from RetroSpotter
 
-b. this is all taken care of using a reference FASTA file from RetroSpotter
+* call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database
 
-c. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database
+* call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene
 
-d. call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene
+* organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
 
-e. organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
+* feed this dataframe into our machine learning algorithm for class detection
 
-f. feed this dataframe into our machine learning algorithm for class detection
-
-3. Other use info here?
+4. Other use info here?
 
 ## Installation
 ### Requirements
