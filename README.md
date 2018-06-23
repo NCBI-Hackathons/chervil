@@ -21,12 +21,6 @@ The first is the calculation of HERV expression in different populations. To do 
 
 The second phase is the automatic development of a machine learning pipeline that uses expression data to predict disease status. We accomplish this using [TPOT](https://github.com/EpistasisLab/tpot) to identify HERV expression patterns specific to viral infection.
 
-## Docker instructions
-
-`docker pull benjamindlee/chervil`
-
-`docker run chervil`
-
 ## How to use CHERVIL
 
 1. Create blast database with HERV elements
