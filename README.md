@@ -44,7 +44,7 @@ SRR021222, control
 Before proceeding, ensure that you have the following installed and functional:
 
 1. [R 3.5 or greater](https://cran.r-project.org)
-2. [Python 3.6](https://www.python.org/downloads/release/python-365/)
+2. [Python 3.6 or greater](https://www.python.org/downloads/release/python-365/)
 3. [Magic-BLAST](https://ncbi.github.io/magicblast/)
 4. [A towel](https://en.wikipedia.org/wiki/Towel_Day#Origin)
 
