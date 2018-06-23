@@ -49,15 +49,13 @@ SRR021222, control
 
 This command calls multiple scripts that execute the pipeline we have developed.
 
-* this is all taken care of using a reference FASTA file from RetroSpotter
+* Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient.
 
-* call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database
+* Take the sam files and count the number of reads corresponding to each ERV gene
 
-* call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene
+* Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
 
-* organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
-
-* feed this dataframe into our machine learning algorithm for class detection
+* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is 
 
 4. Other use info here?
 
