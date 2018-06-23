@@ -1,3 +1,4 @@
 tpot
 pandas
 click
+xgboost
