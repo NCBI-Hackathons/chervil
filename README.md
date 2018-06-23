@@ -112,7 +112,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 
 ### Example Report
 
-Cross Validated accuracy: .917   
+2-fold Cross Validated accuracy: .917   
 External accuracy: .75
 
 <table>
