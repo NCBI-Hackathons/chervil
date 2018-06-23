@@ -15,7 +15,7 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 
 ![pipeline](images/pipeline.png)
 
-At a high level, there are two major phases of the CHIRVEL pipeline.
+At a high level, there are two major phases of the CHERVIL pipeline.
 
 The first is the calculation of HERV expression in different populations. To do this, we use RetroSpotter and Magic-BLAST to align RNA-seq data to known HERVs to quantify HERV expression.
 
@@ -37,13 +37,14 @@ SRR021222, control
 2. Simple one line command to generate HERV count data
 
 This command calls multiple scripts that execute the pipeline we have developed. \
-    a. RetroSpotter github repo is cloned \
-    b. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses \
-    c. this is all taken care of using a reference FASTA file from RetroSpotter \
-    d. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database \
-    e. call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene \
-    f. organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file \
-    g. feed this dataframe into our machine learning algorithm for class detection \
+
+    
+    a. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses \
+    b. this is all taken care of using a reference FASTA file from RetroSpotter \
+    c. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database \
+    d. call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene \
+    e. organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file \
+    f. feed this dataframe into our machine learning algorithm for class detection \
 
 3. Other use info here?
 
