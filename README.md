@@ -73,50 +73,51 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 
 1. Create blast database with HERV elements
 
-Users will need to create a FASTA file containing the nucleotide sequence of each HERV element. For convenience, we have included a [set](reference_genome/her_reference.fasta) of known HERV sequences. The `makeblastdb.sh` command creates a blast database:
+    Users will need to create a FASTA file containing the nucleotide sequence of each HERV element. For convenience, we have included a [set](reference_genome/her_reference.fasta) of known HERV sequences. The `makeblastdb.sh` command creates a blast database:
 
-    $ makeblastdb.sh reference_genome/her_reference.fasta
+        $ makeblastdb.sh reference_genome/her_reference.fasta
 
-This makes a directory `blastdb` containing a reference database called `referencedb`
+    This creates a directory `blastdb` containing a reference database called `referencedb`.
 
-2. Input .csv file with two columns: accession numbers and their classifications.
-```csv
-SRR123456, infected
-SRR789101, infected
-SRR112131, infected
-SRR415161, control
-SRR718192, control
-SRR021222, control
-```
-(note: these are made-up accessions)
+2. Input accession numbers and their classifications
 
-3. Simple one line command to generate HERV classification model
+    This should in the form of a CSV file that looks something like this:
+    ```csv
+    SRR123456, infected
+    SRR789101, infected
+    SRR112131, infected
+    SRR415161, control
+    SRR718192, control
+    SRR021222, control
+    ```
+    (note: these are made-up accessions)
 
-    $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]`
+3. Generate the HERV classification machine learning model
 
-Example run:
+        $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]
 
-    $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"
+    Example usage:
 
-This command calls multiple scripts that execute the pipeline we have developed.
+        $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"
 
-* Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
+        This command calls multiple scripts that execute the pipeline we have developed.
 
-* Take the sam files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
+    * Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
 
-* Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file. (`S2_orgCountsScript.r`)
+    * Take the sam files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
 
-* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set. (`S3_generate_classifier.py`)
+    * Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file. (`S2_orgCountsScript.r`)
 
-## Example Run
-### Example Dataset
+    * Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set. (`S3_generate_classifier.py`)
+
+## Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
     + Data Type: RNA-seq
     + Samples:
         + 10 H1N1, H5N1, and H3N2 infected cells
         + 5 mock-infected controls
 
-### Example Report
+## Example Report
 
 2-fold Cross Validation accuracy: .917   
 Validation accuracy: .75
