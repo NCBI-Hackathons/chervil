@@ -25,11 +25,10 @@ The second phase is the automatic development of a machine learning pipeline tha
 
 1. Create blast database with HERV elements
 
-Users will need to create a fasta file containing the nucleotide sequence of each HERV element.  The `makeblastdb.sh` command creates a blast database.
+Users will need to create a FASTA file containing the nucleotide sequence of each HERV element. For convenience, we have included a [set](reference_genome/her_reference.fasta) of known HERV sequences. The `makeblastdb.sh` command creates a blast database:
 
-```
-makeblastdb.sh reference_genome/her_reference1.fasta
-```
+    $ makeblastdb.sh reference_genome/her_reference.fasta
+
 This makes a directory `blastdb` containing a reference database called `referencedb`
 
 2. Input .csv file with two columns: accession numbers and their classifications.
@@ -45,11 +44,11 @@ SRR021222, control
 
 3. Simple one line command to generate HERV classification model
 
-`chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]`
+    $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]`
 
 Example run:
 
-`chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"`
+    $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"
 
 This command calls multiple scripts that execute the pipeline we have developed.
 
