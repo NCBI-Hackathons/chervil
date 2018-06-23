@@ -109,11 +109,12 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
     + Samples: 
         + 10 H1N1, H5N1, and H3N2 infected cells
         + 5 mock-infected controls
-        
+
+### Example Report
+
 Cross Validated accuracy: .917   
 External accuracy: .75
 
-### Example Report
 <table>
 <tr  align="center">
 <td>Actual</td>
