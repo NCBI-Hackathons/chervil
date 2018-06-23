@@ -1,4 +1,4 @@
-# CHERVIL
+![logo](images/logo.png)
 
 Computational Human Endogenous RetroViral Infection Labeler (CHERVIL) is a pipeline for the detection of endogenous retroviral expression patterns that correspond to current or previous viral infection.
 
