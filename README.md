@@ -45,7 +45,9 @@ SRR021222, control
 ```
 (note: these are made-up accessions)
 
-3. Simple one line command to generate HERV count data
+3. Simple one line command to generate HERV classification model
+
+`chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "test"`
 
 This command calls multiple scripts that execute the pipeline we have developed.
 
