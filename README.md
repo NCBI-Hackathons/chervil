@@ -22,8 +22,6 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 * Generate HERV1 count dataframe
 * Apply machine learning to identify HERV expression patterns specific to viral infection using [TPOT](https://github.com/EpistasisLab/tpot).
 
-
-
 ## How to use CHERVIL
 
 1. Input .csv file with two columns: accession numbers and their classifications.
@@ -49,8 +47,30 @@ You will need the following:
 2. Python 3.6
 3. A sense of adventure
 
-#### Software
-#### Libraries
+### Instructions
+
+First, clone a copy of the repository:
+
+    $ git clone https://github.com/NCBI-Hackathons/chervil.git
+
+and then `cd` into it:
+
+    $ cd chervil
+
+Odds are that you will want to run CHERVIL in a [virtual environment](https://virtualenv.pypa.io/en/stable/). If you don't have virtualenv installed, run:
+
+    $ pip install virtualenv
+
+And then to set up your shiny new virtual environment:
+
+    $ virtualenv env --python=python3.6
+    $ source env/bin/activate
+
+Next, to install the Python components, run:
+
+    (env) $ pip install -r requirements.txt
+
+Optionally, [install XGBoost](https://xgboost.readthedocs.io/en/latest/build.html) (**highly recommended**). This will dramatically improve the quality of your classifier.
 
 ## Example Run
 ### Example Dataset
