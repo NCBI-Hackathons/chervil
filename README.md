@@ -125,7 +125,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 </td>
 </tr>
 </table>
-#### Overall Statistics:
+<h4> Overall Statistics: </h4>
 <table style="border:1px solid black;border-collapse: collapse;">
 <tr align="center">
 <td style="border:1px solid black;padding:4px;text-align:left;"><a href="http://www.shaghighi.ir/pycm/doc/index.html#95%-CI" style="text-decoration:None;">95% CI</a></td>
@@ -264,7 +264,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 <td style="border:1px solid black;padding:4px;">0.6</td>
 </tr>
 </table>
-#### Class Statistics:
+<h4>Class Statistics : </h4>
 <table style="border:1px solid black;border-collapse: collapse;">
 <tr align="center">
 <td>Class</td>
@@ -465,3 +465,4 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 <td style="border:1px solid black;padding:4px;border-collapse: collapse;text-align:left;">Sensitivity, recall, hit rate, or true positive rate</td>
 </tr>
 </table>
+</body>
