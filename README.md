@@ -47,6 +47,10 @@ SRR021222, control
 
 3. Simple one line command to generate HERV classification model
 
+`chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]`
+
+Example run:
+
 `chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "test"`
 
 This command calls multiple scripts that execute the pipeline we have developed.
