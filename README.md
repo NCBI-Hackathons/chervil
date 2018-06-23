@@ -21,6 +21,12 @@ The first is the calculation of HERV expression in different populations. To do 
 
 The second phase is the automatic development of a machine learning pipeline that uses expression data to predict disease status. We accomplish this using [TPOT](https://github.com/EpistasisLab/tpot) to identify HERV expression patterns specific to viral infection.
 
+## Docker instructions
+
+`docker pull benjamindlee/chervil`
+
+`docker run chervil`
+
 ## How to use CHERVIL
 
 1. Create blast database with HERV elements
@@ -59,15 +65,7 @@ This command calls multiple scripts that execute the pipeline we have developed.
 
 * Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
 
-* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is 
-
-4. Other use info here?
-
-## Docker instructions
-
-`docker pull benjamindlee/chervil`
-
-`docker run chervil`
+* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set.
 
 ## Installation (without Docker)
 ### Requirements
@@ -111,7 +109,10 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
     + Samples: 
         + 10 H1N1, H5N1, and H3N2 infected cells
         + 5 mock-infected controls
-    
+        
+Cross Validated accuracy: .917   
+External accuracy: .75
+
 ### Example Report
 <table>
 <tr  align="center">
