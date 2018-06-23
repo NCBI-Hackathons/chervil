@@ -1,6 +1,6 @@
 # CHERVIL
 
-Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection.
+Computational Human Endogenous RetroViral Infection Labeler (CHERVIL) is a pipeline for the detection of endogenous retroviral expression patterns that correspond to current or previous viral infection.
 
 
 ![ERV](images/ERV.png)
@@ -11,16 +11,15 @@ Human endogenous retroviral elements (HERVs) are retroviruses that have integrat
 
 CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](https://github.com/NCBI-Hackathons/RetroSpotter) and adds on a machine learning component to identify patterns in HERV expression specific to distinct viral infections.
 
-## Overview Diagram of Workflow
+## How it works
 
 ![pipeline](images/pipeline.png)
 
-### RetroSpotter Plus
-* Utilize RetroSpotter to identify differentially expressed HERVs in infected populations
-    + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
-    + Supply database of HERV sequences of interest
-* Generate HERV1 count dataframe
-* Using [TPOT](https://github.com/EpistasisLab/tpot), apply machine learning to identify HERV expression patterns specific to viral infection.
+At a high level, there are two major phases of the CHIRVEL pipeline.
+
+The first is the calculation of HERV expression in different populations. To do this, we use RetroSpotter and Magic-BLAST to align RNA-seq data to known HERVs to quantify HERV expression.
+
+The second phase is the automatic development of a machine learning pipeline that uses expression data to predict disease status. We accomplish this using [TPOT](https://github.com/EpistasisLab/tpot) to identify HERV expression patterns specific to viral infection.
 
 ## How to use CHERVIL
 
@@ -40,8 +39,8 @@ SRR021222, control
 This command calls multiple scripts that execute the pipeline we have developed. \
     a. RetroSpotter github repo is cloned \
     b. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses \
-    c. this is all taken care of using a reference fasta file from RetroSpotter \
-    d. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNAseq reads to the reference blast database \ 
+    c. this is all taken care of using a reference FASTA file from RetroSpotter \
+    d. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database \
     e. call the RetroSpotter script count_hits.sh which takes the sam files output from the run_jobs.sh script and counts the number of reads corresponding to each ERV gene \
     f. organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file \
     g. feed this dataframe into our machine learning algorithm for class detection \
