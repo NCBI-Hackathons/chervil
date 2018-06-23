@@ -67,8 +67,23 @@ This command calls multiple scripts that execute the pipeline we have developed.
 
 * Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set. (`S3_generate_classifier.py`)
 
-## Installation (without Docker)
-### Requirements
+## Installation
+
+### Docker
+
+#### From Docker Hub
+
+We have provided a Docker image with our pipeline pre-installed. To download it (assuming you already have Docker nstalled), run:
+
+    $ docker pull benjamindlee/chervil
+
+#### From Dockerfile
+
+Alternatively, you can build the image yourself from our dockerfile:
+
+    $ docker build -t chervil .
+
+### Manually
 
 Before proceeding, ensure that you have the following installed and functional:
 
@@ -77,9 +92,7 @@ Before proceeding, ensure that you have the following installed and functional:
 3. [Magic-BLAST](https://ncbi.github.io/magicblast/)
 4. [A towel](https://en.wikipedia.org/wiki/Towel_Day#Origin)
 
-### Instructions
-
-First, clone a copy of the repository:
+Next, clone a copy of the repository:
 
     $ git clone https://github.com/NCBI-Hackathons/chervil.git
 
@@ -106,7 +119,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 ### Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
     + Data Type: RNA-seq
-    + Samples: 
+    + Samples:
         + 10 H1N1, H5N1, and H3N2 infected cells
         + 5 mock-infected controls
 
