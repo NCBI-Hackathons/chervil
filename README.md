@@ -66,6 +66,7 @@ This command calls multiple scripts that execute the pipeline we have developed.
 ## Docker instructions
 
 `docker pull benjamindlee/chervil`
+
 `docker run chervil`
 
 ## Installation (without Docker)
