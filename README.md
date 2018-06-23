@@ -100,7 +100,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 
         $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"
 
-        This command calls multiple scripts that execute the pipeline we have developed.
+    This command calls multiple scripts that execute the pipeline we have developed.
 
     * Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
 
