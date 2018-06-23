@@ -23,7 +23,18 @@ The second phase is the automatic development of a machine learning pipeline tha
 
 ## How to use CHERVIL
 
-1. Input .csv file with two columns: accession numbers and their classifications.
+0. Add the backend_scripts directory to your path
+
+1. Create blast database with HERV elements
+
+Users will need to create a fasta file containing the nucleotide sequence of each HERV element.  The `makeblastdb.sh` command creates a blast database. 
+
+```
+makeblastdb.sh reference_genome/her_reference1.fasta
+```
+This makes a directory `blastdb` containing a reference database called `referencedb`
+
+2. Input .csv file with two columns: accession numbers and their classifications.
 ```csv
 SRR123456, infected
 SRR789101, infected
@@ -34,11 +45,11 @@ SRR021222, control
 ```
 (note: these are made-up accessions)
 
-2. Simple one line command to generate HERV count data
+3. Simple one line command to generate HERV count data
 
 This command calls multiple scripts that execute the pipeline we have developed. \
 
-
+    
     a. call the RetroSpotter script makeblastdb.sh to create a blast database of the human endogenous retroviruses \
     b. this is all taken care of using a reference FASTA file from RetroSpotter \
     c. call the RetroSpotter script run_jobs.sh which uses the magicblast command to align RNA-seq reads to the reference blast database \
@@ -49,22 +60,7 @@ This command calls multiple scripts that execute the pipeline we have developed.
 3. Other use info here?
 
 ## Installation
-
-### Docker
-
-#### From Docker Hub
-
-We have provided a Docker image with our pipeline pre-installed. To download it (assuming you already have Docker installed), run:
-
-    $ docker pull benjamindlee/chervil
-
-#### From Dockerfile
-
-Alternatively, you can build the image yourself from our dockerfile:
-
-    $ docker build -t chervil .
-
-### Manually
+### Requirements
 
 Before proceeding, ensure that you have the following installed and functional:
 
@@ -72,6 +68,8 @@ Before proceeding, ensure that you have the following installed and functional:
 2. [Python 3.6 or greater](https://www.python.org/downloads/release/python-365/)
 3. [Magic-BLAST](https://ncbi.github.io/magicblast/)
 4. [A towel](https://en.wikipedia.org/wiki/Towel_Day#Origin)
+
+### Instructions
 
 First, clone a copy of the repository:
 
