@@ -20,7 +20,7 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
     + Supply SRA accession numbers for expression dataset of healthy and infection of interest samples
     + Supply database of HERV sequences of interest
 * Generate HERV1 count dataframe
-* Apply machine learning to identify HERV expression patterns specific to viral infection using [TPOT](https://github.com/EpistasisLab/tpot).
+* Using [TPOT](https://github.com/EpistasisLab/tpot), apply machine learning to identify HERV expression patterns specific to viral infection.
 
 ## How to use CHERVIL
 
@@ -41,11 +41,12 @@ SRR021222, control
 ## Installation
 ### Requirements
 
-You will need the following:
+Before proceeding, ensure that you have the following installed and functional:
 
 1. R
-2. Python 3.6
-3. A sense of adventure
+2. [Python 3.6](https://www.python.org/downloads/release/python-365/)
+3. [Magic-BLAST](https://ncbi.github.io/magicblast/)
+4. [A towel](https://en.wikipedia.org/wiki/Towel_Day#Origin)
 
 ### Instructions
 
@@ -70,7 +71,7 @@ Next, to install the Python components, run:
 
     (env) $ pip install -r requirements.txt
 
-Optionally, [install XGBoost](https://xgboost.readthedocs.io/en/latest/build.html) (**highly recommended**). This will dramatically improve the quality of your classifier.
+Once you've installed the Python requirements, install [XGBoost](https://xgboost.readthedocs.io/en/latest/build.html). Be sure to [install the Python bindings](http://xgboost.readthedocs.io/en/latest/build.html#python-package-installation) for XGBoost as well.
 
 ## Example Run
 ### Example Dataset
