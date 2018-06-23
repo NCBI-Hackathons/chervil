@@ -45,8 +45,8 @@ OUT_DIR=$4 #Where to put the results when job in run
 LABEL=$5 #Short label for file name
 
 
-#S1_make_acc_file.r $ACC_FILE
-#run_jobs.sh temp_acc.txt $BLAST_DB $THREADS $OUT_DIR $LABEL
-#count_hits.sh $OUT_DIR
-#S2_orgCountsScript.r $ACC_FILE $OUT_DIR 
+S1_make_acc_file.r $ACC_FILE
+run_jobs.sh temp_acc.txt $BLAST_DB $THREADS $OUT_DIR $LABEL
+count_hits.sh $OUT_DIR
+S2_orgCountsScript.r $ACC_FILE $OUT_DIR 
 S3_generate_classifier.py ERVcounts_comp.csv
