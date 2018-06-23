@@ -26,13 +26,21 @@ CHERVIL builds on an existing pipeline built for HERV detection [RetroSpotter](h
 
 ## How to use CHERVIL
 
-#### 1. Input .CSV file that looks like this:
-![image](example_file.png)
+1. Input .csv file with two columns: accession numbers and their classifications.
+```csv
+SRR123456, infected
+SRR789101, infected
+SRR112131, infected
+SRR415161, control
+SRR718192, control
+SRR021222, control
+```
+(note: these are made-up accessions)
 
-#### 2. Simple one line command to generate HERV count data
-#### 3. Other use info here?
+2. Simple one line command to generate HERV count data
+3. Other use info here?
 
-## Installation 
+## Installation
 ### Requirements
 #### Software
 #### Libraries
