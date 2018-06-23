@@ -59,13 +59,13 @@ Example run:
 
 This command calls multiple scripts that execute the pipeline we have developed.
 
-* Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient.
+* Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
 
-* Take the sam files and count the number of reads corresponding to each ERV gene
+* Take the sam files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
 
-* Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file
+* Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file. (`S2_orgCountsScript.r`)
 
-* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set.
+* Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set. (`S3_generate_classifier.py`)
 
 ## Installation (without Docker)
 ### Requirements
