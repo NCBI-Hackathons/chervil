@@ -3,7 +3,7 @@
 Computational Human Endogenous RetroViral Infection Landscape is a pipeline and analytical tool for detection of endogenous retroviral expression features that correspond to current or previous viral infection.
 
 
-![image](images/image.png)
+![ERV](images/ERV.png)
 
 
 ## What is CHERVIL and why do we need it?
