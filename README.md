@@ -67,8 +67,6 @@ Next, to install the Python components, run:
 
     (env) $ pip install -r requirements.txt
 
-Once you've installed the Python requirements, install [XGBoost](https://xgboost.readthedocs.io/en/latest/build.html). Be sure to [install the Python bindings](http://xgboost.readthedocs.io/en/latest/build.html#python-package-installation) for XGBoost as well.
-
 ## How to use CHERVIL
 
 1. **Create blast database with HERV elements**
