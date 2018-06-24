@@ -27,7 +27,7 @@ The second phase is the automatic development of a machine learning pipeline tha
 
 #### From Docker Hub
 
-We have provided a Docker image with our pipeline pre-installed. To download it (assuming you already have Docker nstalled), run:
+We have provided a Docker image with our pipeline pre-installed. To download it (assuming you already have Docker installed), run:
 
     $ docker pull benjamindlee/chervil
 
