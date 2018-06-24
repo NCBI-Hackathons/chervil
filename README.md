@@ -7,9 +7,9 @@ Computational Human Endogenous RetroViral Infection Labeler (CHERVIL) is a pipel
 
 
 ## What is CHERVIL and why do we need it?
-Human endogenous retroviral elements (HERVs) are retroviruses that have integrated themselves into the human germline. Usually, they remain latent in the human genome. However, previous work suggests that some HERVs become actively transcribed upon viral infection. CHERVIL uses differential expression analysis of HERVs in healthy and infected populations via RNA-seq in  to detect pre-symptomatic or historic viral infection.
+[Human endogenous retroviral elements](https://en.wikipedia.org/wiki/Endogenous_retrovirus) (HERVs) are retroviruses that have integrated themselves into the human germline. Usually, they remain latent in the human genome. However, previous work suggests that some HERVs become actively transcribed upon viral infection.
 
-CHERVIL builds on an existing pipeline built for HERV detection, [RetroSpotter](https://github.com/NCBI-Hackathons/RetroSpotter), and adds on a machine learning component to identify patterns in HERV expression specific to distinct viral infections.
+CHERVIL builds on an existing pipeline built for HERV expression quantification, [RetroSpotter](https://github.com/NCBI-Hackathons/RetroSpotter), and adds on a machine learning component to identify patterns in HERV expression indicative of pre-symptomatic or historic viral infection.
 
 ## How it works
 
