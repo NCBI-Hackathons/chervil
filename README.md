@@ -2,11 +2,7 @@
 
 Computational Human Endogenous RetroViral Infection Labeler (CHERVIL) is a pipeline for the detection of endogenous retroviral expression patterns that correspond to current or previous viral infection.
 
-Team Leads: [Benjamin Lee](https://github.com/Benjamin-Lee)/[Jeremy Ash](https://github.com/jrash)
-
-Team Members: [Corinne Walsh](https://github.com/corinnewalsh), [Grant Vagle](https://github.com/grantvagle)
-
-This project was developed at the [Rocky Mountain Genomics HackCon 2018](https://hackathon.colorado.edu).
+This project was developed at the [Rocky Mountain Genomics HackCon 2018](https://hackathon.colorado.edu) by [Benjamin Lee](https://github.com/Benjamin-Lee) (team lead), [Jeremy Ash](https://github.com/jrash) (team lead), [Corinne Walsh](https://github.com/corinnewalsh), and [Grant Vagle](https://github.com/grantvagle) with support from [Ben Busby](https://github.com/dcgenomics) and [Michael Crusoe](https://github.com/mr-c).
 
 ![ERV](images/ERV.png)
 
