@@ -2,6 +2,10 @@
 
 Computational Human Endogenous RetroViral Infection Labeler (CHERVIL) is a pipeline for the detection of endogenous retroviral expression patterns that correspond to current or previous viral infection.
 
+Team Leads: [Benjamin Lee](https://github.com/Benjamin-Lee)/[Jeremy Ash](https://github.com/jrash)
+Team Members: [Corinne Walsh](https://github.com/corinnewalsh), [Grant Vagle](https://github.com/grantvagle)
+
+This project was developed at the [Rocky Mountain Genomics HackCon 2018](https://hackathon.colorado.edu).
 
 ![ERV](images/ERV.png)
 
@@ -109,6 +113,12 @@ Next, to install the Python components, run:
     * Organizes the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a CSV file. (`S2_orgCountsScript.r`)
 
     * Feeds this dataframe into TPOT, an automated machine learning pipeline. The model and an HTML file with a confusion matrix table with performance measures for external data set are then saved for analysis. (`S3_generate_classifier.py`)
+
+## Troubleshooting
+
+Bug reports should be submitted [here](https://github.com/NCBI-Hackathons/chervil/issues).
+
+If you run into any problems while using CHERVIL, feel free to [email](mailto:benjamindlee@me.com) Benjamin Lee ([GitHub](https://github.com/Benjamin-Lee)) for support.
 
 ## Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
