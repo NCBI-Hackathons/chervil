@@ -71,7 +71,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 
 ## How to use CHERVIL
 
-1. Create blast database with HERV elements
+1. **Create blast database with HERV elements**
 
     Users will need to create a FASTA file containing the nucleotide sequence of each HERV element. For convenience, we have included a [set](reference_genome/her_reference.fasta) of known HERV sequences. The `makeblastdb.sh` command creates a blast database:
 
@@ -79,7 +79,7 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
 
     This creates a directory `blastdb` containing a reference database called `referencedb`.
 
-2. Input accession numbers and their classifications
+2. **Input accession numbers and their classifications**
 
     This should in the form of a CSV file that looks something like this:
     ```csv
@@ -92,23 +92,25 @@ Once you've installed the Python requirements, install [XGBoost](https://xgboost
     ```
     (note: these are made-up accessions)
 
-3. Generate the HERV classification machine learning model
+3. **Generate the HERV classification machine learning model**
 
-        $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for sam files]
+    Assuming you are in a directory with accessions and their classes, run:
+
+        $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for SAM files]
 
     Example usage:
 
-        $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "run"
+        $ chervil.sh srr_inf_test.csv ../blast_dbs/referencedb 20 out "test"
 
     This command calls multiple scripts that execute the pipeline we have developed.
 
-    * Uses magicblast command align RNA-seq reads to the reference blast database.  Generates a sam file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
+    * Uses `magicblast` command align RNA-seq reads to the reference blast database.  Generates a SAM file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
 
-    * Take the sam files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
+    * Takes the SAM files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
 
-    * Organize the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a csv file. (`S2_orgCountsScript.r`)
+    * Organizes the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a CSV file. (`S2_orgCountsScript.r`)
 
-    * Feed this dataframe into TPOT, an automated machine learing pipeline.  The output is cross-validated and external prediction accuracy, and an html file with a contingency table many other performance measures for external data set. (`S3_generate_classifier.py`)
+    * Feeds this dataframe into TPOT, an automated machine learning pipeline. The model and an HTML file with a confusion matrix table with performance measures for external data set are then saved for analysis. (`S3_generate_classifier.py`)
 
 ## Example Dataset
 * PRJNA349748: Human Tracheobronchial Epithelial (HTBE) cells infected with Influenza
