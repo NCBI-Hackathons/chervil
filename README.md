@@ -103,13 +103,13 @@ Next, to install the Python components, run:
 
     This command calls multiple scripts that execute the pipeline we have developed.
 
-    * Uses `magicblast` command align RNA-seq reads to the reference blast database.  Generates a SAM file for each accession. (`S1_make_acc_file.r`, `run_jobs.sh`)
+    * Uses `magicblast` command align RNA-seq reads to the reference blast database.  Generates a SAM file for each accession. ([`S1_make_acc_file.r`](backend_scripts/S1_make_acc_file.r), [`run_jobs.sh`](backend_scripts/run_jobs.sh))
 
-    * Takes the SAM files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
+    * Takes the SAM files and count the number of reads corresponding to each ERV gene. ([`count_hits.sh`](backend_scripts/count_hits.sh))
 
-    * Organizes the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a CSV file. (`S2_orgCountsScript.r`)
+    * Organizes the counts into a dataframe that includes all of the sample numbers (by SRR accession), their class (infected, not infected, etc.) and their read count for each ERV gene, written to a CSV file. ([`S2_orgCountsScript.r`](backend_scripts/S2_orgCountsScript.r))
 
-    * Feeds this dataframe into TPOT, an automated machine learning pipeline. The model and an HTML file with a confusion matrix table with performance measures for external data set are then saved for analysis. (`S3_generate_classifier.py`)
+    * Feeds this dataframe into TPOT, an automated machine learning pipeline. The model and an HTML file with a confusion matrix table with performance measures for external data set are then saved for analysis. ([`S3_generate_classifier.py`](backend_scripts/S3_generate_classifier.py))
 
 ## Troubleshooting
 
