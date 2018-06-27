@@ -95,7 +95,7 @@ Next, to install the Python components, run:
 
     Assuming you are in a directory with accessions and their classes, run:
 
-        $ chervil.sh [path to SRR acession file] [path to blast database] [number of cores] [output directory] [prefix for SAM files]
+        $ chervil.sh [path to SRR accession csv] [path to blast database] [number of cores] [output directory] [prefix for SAM files]
 
     Example usage:
 
@@ -103,7 +103,7 @@ Next, to install the Python components, run:
 
     This command calls multiple scripts that execute the pipeline we have developed.
 
-    * Uses `magicblast` command align RNA-seq reads to the reference blast database.  Generates a SAM file for each patient. (`S1_make_acc_file.r`, `run_jobs.sh`)
+    * Uses `magicblast` command align RNA-seq reads to the reference blast database.  Generates a SAM file for each accession. (`S1_make_acc_file.r`, `run_jobs.sh`)
 
     * Takes the SAM files and count the number of reads corresponding to each ERV gene. (`count_hits.sh`)
 
